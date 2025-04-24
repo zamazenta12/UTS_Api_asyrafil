@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Premier League Teams</title>
+    <title>Eradivisie Standings</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fontawesome/5.15.4/css/all.min.css">
     <style>
         body {
@@ -58,7 +58,7 @@
 
 <body>
     <div class="container">
-        <h1>Premier League Teams</h1>
+        <h1>Eradivisie League</h1>
         <!-- Menampilkan error jika ada masalah -->
         @if (isset($data['error']))
             <div class="error">
@@ -69,9 +69,8 @@
             <table>
                 <thead>
                     <tr>
-                        <th>#</th>
+                        <th>No</th>
                         <th>Team Name</th>
-                        <th>Logo</th>
                         <th>Points</th>
                         <th>Matches Played</th>
                         <th>Wins</th>
@@ -85,7 +84,6 @@
                         <tr>
                             <td>{{ $loop->iteration }}</td>
                             <td>{{ $teams['team']['name'] }}</td>
-                            <td>{{ $teams['team']['logo'] }}</td>
                             <td>{{ $teams['stats']['points'] }}</td>
                             <td>{{ $teams['stats']['gamesPlayed'] }}</td>
                             <td>{{ $teams['stats']['wins'] }}</td>
